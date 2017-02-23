@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>:// ready, start.</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<script type="text/javascript">
+	  function displayTime() {
+	      var currentTime = new Date();
+	      var hours = currentTime.getHours();
+	      var minutes = currentTime.getMinutes();
+	      var seconds = currentTime.getSeconds();
+
+				// remove if 24hr clock
+				var ampm = hours >= 12 ? 'PM' : 'AM';
+				hours = hours % 12;
+				hours = hours ? hours : 12;
+
+				/* inclusion of leading zeros
+					condition ? else value-if-true : value-if-false
+					where [?] as then, [:] as else 	*/
+	      hours = hours < 10 ? '0' + hours : hours;
+	      minutes = minutes < 10 ? '0' + minutes : minutes;
+	      seconds = seconds < 10 ? '0' + seconds : seconds;
+
+	      var clockDiv = document.getElementById('clock');
+
+				// print out
+	      clockDiv.innerHTML = hours + ":" + minutes + " " + ampm;
+
+	      setTimeout(displayTime, 500);
+	    }
+
+	  displayTime();
+	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+
+<body onload="displayTime()">
+
+	<main>
+		<div>
+			<time id="clock"></time>
+			<nav>
+				<a class="one" href="https://my.senecacollege.ca">blackboard</a>
+				<a class="two" href="https://myseneca.ca">seneca email</a>
+				<a class="three" href="https://9livesarchived.wordpress.com/wp-admin">wordpress</a>
+				<a class="four" href="https://gmail.com">gmail</a>
+				<a class="five" href="https://outlook.com">outlook</a>
+			</nav>
+		</div>
+	</main>
+</body>
+</html>
