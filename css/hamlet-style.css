@@ -1,0 +1,94 @@
+body {
+	font-family: 'Roboto Slab', serif;
+		font-size: 1.5em;
+		text-transform: lowercase;
+		color: #000;
+	background: url(../backgrounds/hamlet-bg.jpg) no-repeat center fixed #fff;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+}
+
+main {
+	width: 100vw; /* viewport height */
+	height: 100vw; /* viewpoert width */
+}
+
+.wrapper {
+	width: 60%;
+	position: absolute;
+		top: 50%;
+		left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+		flex-flow: row wrap; /* flex-direction, flex-wrap */
+		justify-content: center; /* alignment along the main-axis */
+		align-items: stretch; /* alignment along the cross-axis (perpendicular to main-axis) */
+		align-content: center; /* alignment within container */
+	margin: 0 auto;
+}
+
+nav {
+	width: calc(90% / 3);
+}
+
+nav, .search {
+	flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
+	padding: 5px;
+	margin: 3px;
+	background-color: rgba(93, 115, 126, 0.2);
+	transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+}
+
+nav:hover, nav:focus {
+		background-color: rgba(93, 115, 126, 0.1);
+}
+
+nav a {
+	text-decoration: none;
+		color: #fff;
+	text-align: left;
+	display: block;
+	padding: 3px 10px;
+	transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+}
+
+nav:hover a {
+	color: transparent;
+	text-shadow: 0px 0px 7px #fff;
+	background-color: transparent;
+}
+
+nav a:hover {
+	color: #fff;
+	text-shadow: 0px 0px 1px #fff;
+}
+
+.search {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+}
+.search-box {
+	width: 90%;
+	font-family: 'Roboto Slab', serif;
+		font-size: 1.1em;
+		text-transform: lowercase;
+		color: #b71c1c;
+	background: none;
+	border: none;
+}
+
+.search-box:focus {
+	outline: none;
+	border-bottom: 2px solid #b71c1c;
+}
