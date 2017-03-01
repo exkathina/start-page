@@ -1,0 +1,147 @@
+body {
+	font-family: 'Playfair Display', serif;
+		font-size: 1.1em;
+		font-weight: 400;
+		line-height: 1.5em;
+		text-transform: lowercase;
+		color: #000;
+	background: url(../backgrounds/ariel-bg.jpg) no-repeat center fixed #fff;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+}
+
+main {
+	width: 100vw; /* viewport width */
+}
+
+.wrapper {
+	width: 60%;
+	/* vertically align to center */
+		position: absolute;
+			top: 50%;
+			left: 50%;
+		transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	display: inline-flex;
+		flex-flow: row wrap; /* flex-direction, flex-wrap */
+		justify-content: center; /* alignment along the main-axis */
+		align-items: stretch; /* alignment along the cross-axis (perpendicular to main-axis) */
+		align-content: center; /* alignment within container */
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.search, .search-box, nav {
+	flex: 1 1 auto; /* flex-grow, flex-shrink, flex-basis */
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.75);
+	/* transition: ease-in-out (background-color) */
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+}
+
+nav:hover, nav:focus, .search-box:hover, .search-box:focus {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.search, nav {
+	margin: 2px 0;
+}
+
+.search {
+	text-align: center;
+	padding: 0;
+}
+
+.search-box {
+	width: 100%;
+	font-family: 'Playfair Display', serif;
+		font-size: 1.2em;
+		line-height: 2.5em;
+		text-transform: lowercase;
+		text-indent: 10px;
+		color: #d32f2f;
+	background: none;
+	border: none;
+	border-bottom: 5px solid transparent;
+	padding: 5px 0;
+	margin: 0;
+}
+
+.search-box:focus {
+	outline: none;
+	border-bottom: 5px solid #d32f2f;
+}
+
+nav {
+	padding: 5px}
+
+nav a {
+	text-decoration: none;
+		color: #000;
+	text-align: left;
+	display: inline-block;
+	position: relative;
+	padding: 3px 10px;
+	border-bottom: 2px solid rgba(255, 152, 0, 0);
+	/* transition: ease-in-out (link:hover color, blur) */
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+	color: #000;
+	text-shadow: 0px 0px 1px #fff;
+}
+
+nav a:before {
+	content: "";
+	width: 100%;
+	position: absolute;
+		bottom: 0;
+		left: 0;
+	border-bottom: 2px solid rgba(255, 152, 0, 1);
+	visibility: hidden;
+	/* transform: scale (border hidden) */
+		-webkit-transform: scaleX(0);
+		-moz-transform: scaleX(0);
+		-o-transform: scaleX(0);
+		transform: scaleX(0);
+	/* transition: ease-in-out (border animation) */
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+}
+
+nav a:hover:before {
+	visibility: visible;
+	/* transform: scale (border visible) */
+		-webkit-transform: scaleX(1);
+		-moz-transform: scaleX(1);
+		-o-transform: scaleX(1);
+		transform: scaleX(1);
+}
+
+nav:hover a {
+	color: transparent;
+	text-shadow: 0px 0px 7px #000;
+	background-color: transparent;
+}
+
+h1 {
+	font-family: 'Playfair Display', serif;
+		font-size: 1.1em;
+		font-weight: 400;
+		line-height: 1.5em;
+		text-transform: lowercase;
+		color: #d32f2f;
+	display: inline-block;
+	padding: 0 5px;
+}
